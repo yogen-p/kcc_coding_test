@@ -2,16 +2,12 @@
 <navigation xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:id="@+id/main_graph"
-    app:startDestination="@id/caseStudyFragment">
+    app:startDestination="@id/caseStudyListFragment">
 
     <fragment
         android:id="@+id/caseStudyFragment"
         android:name="com.yogenp.codingtest.presentation.ui.casestudy.CaseStudyFragment"
-        android:label="CaseStudyFragment" >
-        <action
-            android:id="@+id/action_caseStudyFragment_to_caseStudyListFragment"
-            app:destination="@id/caseStudyListFragment" />
-    </fragment>
+        android:label="CaseStudyFragment" />
     <fragment
         android:id="@+id/caseStudyListFragment"
         android:name="com.yogenp.codingtest.presentation.ui.casestudy_list.CaseStudyListFragment"

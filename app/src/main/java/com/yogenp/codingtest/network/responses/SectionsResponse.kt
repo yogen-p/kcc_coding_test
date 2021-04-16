@@ -8,6 +8,6 @@ data class SectionsResponse(
     var title: String,
 
     @SerializedName("body_elements")
-    var bodyElements: MutableList<String>
+    var bodyElements: MutableList<Any>
 
 )
