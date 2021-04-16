@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/main_graph"
+    app:startDestination="@id/caseStudyFragment">
+
+    <fragment
+        android:id="@+id/caseStudyFragment"
+        android:name="com.yogenp.codingtest.presentation.ui.casestudy.CaseStudyFragment"
+        android:label="CaseStudyFragment" >
+        <action
+            android:id="@+id/action_caseStudyFragment_to_caseStudyListFragment"
+            app:destination="@id/caseStudyListFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/caseStudyListFragment"
+        android:name="com.yogenp.codingtest.presentation.ui.casestudy_list.CaseStudyListFragment"
+        android:label="CaseStudyListFragment" >
+        <action
+            android:id="@+id/action_caseStudyListFragment_to_caseStudyFragment"
+            app:destination="@id/caseStudyFragment" />
+    </fragment>
+</navigation>
