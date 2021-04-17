@@ -1,6 +1,5 @@
 package com.yogenp.codingtest.presentation.components
 
-import android.util.Log
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.shape.CornerSize
@@ -16,9 +15,7 @@ import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.unit.dp
 import com.yogenp.codingtest.network.responses.SectionsResponse
 import com.yogenp.codingtest.util.DEFAULT_PLACEHOLDER_IMAGE
-import com.yogenp.codingtest.util.TAG
 import com.yogenp.codingtest.util.loadImage
-import org.json.JSONObject
 
 @Composable
 fun SectionCard(
@@ -48,7 +45,7 @@ fun SectionCard(
             for (element in section.bodyElements) {
                 val s = element.toString()
                 if (s.startsWith("{image_url", true)) {
-                    val url = s.substring(11, s.length-1)
+                    val url = s.substring(11, s.length - 1)
                     url.let {
                         val image = loadImage(
                             url = it,

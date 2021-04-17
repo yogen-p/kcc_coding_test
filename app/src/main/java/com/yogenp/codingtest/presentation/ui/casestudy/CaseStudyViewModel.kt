@@ -2,7 +2,6 @@ package com.yogenp.codingtest.presentation.ui.casestudy
 
 import androidx.lifecycle.ViewModel
 import com.yogenp.codingtest.persistence.ThemePreferences
-import com.yogenp.codingtest.repository.CaseStudyRepository
 import dagger.hilt.android.lifecycle.HiltViewModel
 import javax.inject.Inject
 

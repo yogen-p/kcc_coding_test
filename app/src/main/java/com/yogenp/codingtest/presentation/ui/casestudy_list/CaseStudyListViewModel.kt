@@ -20,7 +20,7 @@ constructor(
 ) : ViewModel() {
 
     val caseStudies: MutableState<List<CaseStudy>> = mutableStateOf(listOf())
-    private val loading = mutableStateOf(false)
+    val loading = mutableStateOf(false)
 
     init {
         getFile()
