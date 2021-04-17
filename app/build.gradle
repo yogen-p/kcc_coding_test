@@ -84,6 +84,10 @@ dependencies {
     implementation "com.github.bumptech.glide:glide:$glide_version"
     annotationProcessor "com.github.bumptech.glide:compiler:$glide_version"
 
+    // JetPack Datastore
+    def datastore_version = "1.0.0-alpha08"
+    implementation "androidx.datastore:datastore-preferences:$datastore_version"
+
     androidTestImplementation 'androidx.test.ext:junit:1.1.2'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
 }

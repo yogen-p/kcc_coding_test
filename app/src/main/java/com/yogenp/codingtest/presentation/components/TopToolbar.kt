@@ -23,7 +23,7 @@ fun TopToolbar(
             Row(
                 modifier = Modifier
                     .fillMaxWidth()
-                    .height(30.dp)
+                    .height(50.dp)
             ) {
                 Text(
                     text = text,
