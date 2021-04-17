@@ -3,6 +3,7 @@ package com.yogenp.codingtest.presentation.components
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.*
+import androidx.compose.foundation.shape.CornerSize
 import androidx.compose.material.Card
 import androidx.compose.material.MaterialTheme
 import androidx.compose.material.Text
@@ -10,6 +11,7 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.asImageBitmap
 import androidx.compose.ui.layout.ContentScale
+import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
 import com.yogenp.codingtest.domain.model.CaseStudy
 import com.yogenp.codingtest.util.DEFAULT_PLACEHOLDER_IMAGE
@@ -25,7 +27,7 @@ fun CaseStudyCard(
             .padding(8.dp)
             .fillMaxWidth()
             .clickable(onClick = onClick),
-        shape = MaterialTheme.shapes.small,
+        shape = MaterialTheme.shapes.small.copy(CornerSize(6.dp)),
         elevation = 8.dp
     ) {
         Column {
@@ -56,7 +58,9 @@ fun CaseStudyCard(
                         text = teaser,
                         modifier = Modifier
                             .fillMaxWidth(),
-                        style = MaterialTheme.typography.h5
+                        style = MaterialTheme.typography.h6,
+                        maxLines = 1,
+                        overflow = TextOverflow.Ellipsis
                     )
                 }
             }

@@ -1,6 +1,5 @@
-# kcc_coding_test
+# KCC Coding Test
 Coding Test App for Kin+Carta Create
-
 
 ### Test Description
 
