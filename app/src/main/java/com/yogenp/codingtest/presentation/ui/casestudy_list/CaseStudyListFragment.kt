@@ -62,11 +62,13 @@ class CaseStudyListFragment : Fragment() {
                                     itemsIndexed(
                                         items = caseStudies
                                     ) { _, caseStudy ->
-                                        CaseStudyCard(caseStudy = caseStudy) {
-                                            application.caseStudy = caseStudy
-                                            findNavController()
-                                                .navigate(R.id.goToCaseStudyFragment)
-                                        }
+                                        CaseStudyCard(
+                                            caseStudy = caseStudy,
+                                            onClick = {
+                                                application.caseStudy = caseStudy
+                                                findNavController().navigate(R.id.goToCaseStudyFragment)
+                                            }
+                                        )
                                     }
                                 }
                             }

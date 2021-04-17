@@ -7,7 +7,9 @@ import androidx.compose.material.icons.filled.NightlightRound
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.dp
+import com.yogenp.codingtest.R
 
 @Composable
 fun TopToolbar(
@@ -37,7 +39,7 @@ fun TopToolbar(
                 IconButton(onClick = { onClick() }) {
                     Icon(
                         imageVector = Icons.Filled.NightlightRound,
-                        contentDescription = "Toggle theme",
+                        contentDescription = stringResource(R.string.toggle_theme),
                         modifier = Modifier
                             .fillMaxSize()
                             .wrapContentWidth(Alignment.End)

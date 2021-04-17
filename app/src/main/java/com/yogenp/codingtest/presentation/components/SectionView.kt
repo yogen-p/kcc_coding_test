@@ -12,7 +12,9 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.shadow
 import androidx.compose.ui.graphics.asImageBitmap
 import androidx.compose.ui.layout.ContentScale
+import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.dp
+import com.yogenp.codingtest.R
 import com.yogenp.codingtest.domain.model.CaseStudy
 import com.yogenp.codingtest.util.DEFAULT_PLACEHOLDER_IMAGE
 import com.yogenp.codingtest.util.loadImage
@@ -33,7 +35,7 @@ fun SectionView(
             image?.let {
                 Image(
                     bitmap = image.asImageBitmap(),
-                    contentDescription = null,
+                    contentDescription = stringResource(R.string.hero_image),
                     modifier = Modifier
                         .fillMaxWidth()
                         .height(200.dp)

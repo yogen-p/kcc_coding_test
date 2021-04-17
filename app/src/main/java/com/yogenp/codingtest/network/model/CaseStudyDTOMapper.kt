@@ -3,7 +3,7 @@ package com.yogenp.codingtest.network.model
 import com.yogenp.codingtest.domain.model.CaseStudy
 import com.yogenp.codingtest.domain.utils.DomainMapper
 
-class CaseStudyDTOMapper : DomainMapper<CaseStudyDTO, CaseStudy>{
+class CaseStudyDTOMapper : DomainMapper<CaseStudyDTO, CaseStudy> {
     override fun mapToDomainModel(model: CaseStudyDTO): CaseStudy {
         return CaseStudy(
             id = model.id,
@@ -32,11 +32,11 @@ class CaseStudyDTOMapper : DomainMapper<CaseStudyDTO, CaseStudy>{
         )
     }
 
-    fun toDomainList(initial: List<CaseStudyDTO>): List<CaseStudy>{
+    fun toDomainList(initial: List<CaseStudyDTO>): List<CaseStudy> {
         return initial.map { mapToDomainModel(it) }
     }
 
-    fun fromDomainList(initial: List<CaseStudy>): List<CaseStudyDTO>{
+    fun fromDomainList(initial: List<CaseStudy>): List<CaseStudyDTO> {
         return initial.map { mapFromDomainModel(it) }
     }
 }

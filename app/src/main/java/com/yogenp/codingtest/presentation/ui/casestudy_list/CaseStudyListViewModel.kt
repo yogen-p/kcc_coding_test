@@ -20,7 +20,6 @@ constructor(
 ) : ViewModel() {
 
     val caseStudies: MutableState<List<CaseStudy>> = mutableStateOf(listOf())
-    val loading = mutableStateOf(false)
 
     init {
         getFile()
@@ -28,12 +27,8 @@ constructor(
 
     private fun getFile() {
         viewModelScope.launch {
-            loading.value = true
-
             val result = repository.get()
             caseStudies.value = result
-
-            loading.value = false
         }
     }
 
