@@ -9,6 +9,9 @@ import kotlinx.coroutines.MainScope
 import kotlinx.coroutines.flow.first
 import kotlinx.coroutines.launch
 
+/*
+* Base Application
+* */
 @HiltAndroidApp
 class BaseApplication : Application() {
 

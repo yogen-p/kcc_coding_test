@@ -15,24 +15,36 @@ class BasicTests {
     @get: Rule
     val composeTestRule = createAndroidComposeRule<MainActivity>()
 
+    /*
+    * Example Test
+    * */
     @Test
     fun useAppContext() {
         val appContext = InstrumentationRegistry.getInstrumentation().targetContext
         Assert.assertEquals("com.yogenp.codingtest", appContext.packageName)
     }
 
+    /*
+    * App Open Test
+    * */
     @Test
     fun app_launches() {
         composeTestRule.onNodeWithText(text = "Testing Tube brakes", substring = true)
             .assertIsDisplayed()
     }
 
+    /*
+    * App Scrollable Test
+    * */
     @Test
     fun app_scrollsCaseStudies(){
         composeTestRule.onNodeWithText(text = "Testing Tube brakes", substring = true)
             .performGesture { swipeUp() }
     }
 
+    /*
+    * App Responsiveness Test
+    * */
     @Test
     fun app_openCaseStudies() {
         composeTestRule.onNodeWithText(text = "Testing Tube brakes", substring = true)
@@ -43,6 +55,9 @@ class BasicTests {
             .assertIsDisplayed()
     }
 
+    /*
+    * Toggle Theme Icon Test
+    * */
     @Test
     fun app_toggleTheme(){
         composeTestRule.onNodeWithContentDescription("Toggle theme").performClick()

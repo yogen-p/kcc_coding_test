@@ -5,6 +5,9 @@ import com.yogenp.codingtest.persistence.ThemePreferences
 import dagger.hilt.android.lifecycle.HiltViewModel
 import javax.inject.Inject
 
+/*
+* VideModel for Case study and its sections
+* */
 @HiltViewModel
 class CaseStudyViewModel
 @Inject

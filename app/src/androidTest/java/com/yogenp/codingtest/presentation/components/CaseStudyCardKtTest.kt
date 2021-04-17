@@ -10,7 +10,9 @@ import com.yogenp.codingtest.util.TEST_CASE_STUDY
 import org.junit.Rule
 import org.junit.Test
 
-
+/*
+* For CaseStudy Composable in Home Screen
+* */
 class CaseStudyCardKtTest {
 
     @get:Rule
@@ -22,9 +24,11 @@ class CaseStudyCardKtTest {
         composeTestRule.setContent {
             CaseStudyCard(caseStudy = TEST_CASE_STUDY) {}
         }
+        // Fragment 1
         composeTestRule.onNodeWithText(text = "Hello World!", substring = true)
             .assertIsDisplayed()
 
+        // Fragment 2
         composeTestRule.onNodeWithText(text = "Hello World!", substring = true)
             .performClick()
         composeTestRule.onNodeWithContentDescription("Hero Image", ignoreCase = true)

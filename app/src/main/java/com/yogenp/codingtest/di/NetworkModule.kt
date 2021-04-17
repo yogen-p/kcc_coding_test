@@ -15,12 +15,18 @@ import javax.inject.Singleton
 @InstallIn(SingletonComponent::class)
 object NetworkModule {
 
+    /*
+    * Provide Network <-> Domain Mapper
+    * */
     @Singleton
     @Provides
     fun provideCSMapper(): CaseStudyDTOMapper {
         return CaseStudyDTOMapper()
     }
 
+    /*
+    * Provide Network Service (Retrofit Builder)
+    * */
     @Singleton
     @Provides
     fun provideCSNetworkService(): CaseStudyNetworkService {

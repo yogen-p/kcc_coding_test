@@ -5,6 +5,9 @@ import androidx.appcompat.app.AppCompatActivity
 import com.yogenp.codingtest.R
 import dagger.hilt.android.AndroidEntryPoint
 
+/*
+* Host activity for fragments
+* */
 @AndroidEntryPoint
 class MainActivity : AppCompatActivity() {
 

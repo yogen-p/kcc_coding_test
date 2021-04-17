@@ -13,6 +13,9 @@ import javax.inject.Singleton
 @InstallIn(SingletonComponent::class)
 object AppModule {
 
+    /*
+    * Provide Application Dependency
+    * */
     @Singleton
     @Provides
     fun provideApplication(@ApplicationContext app: Context): BaseApplication {

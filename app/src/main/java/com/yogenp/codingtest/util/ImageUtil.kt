@@ -11,6 +11,10 @@ import com.bumptech.glide.Glide
 import com.bumptech.glide.request.target.CustomTarget
 import com.bumptech.glide.request.transition.Transition
 
+/*
+* Live composable to show a default image while the original is being fetched
+* and update accordingly
+* */
 @Composable
 fun loadImage(
     url: String,
@@ -23,11 +27,9 @@ fun loadImage(
         .asBitmap()
         .load(defaultImage)
         .into(object: CustomTarget<Bitmap>(){
-
             override fun onResourceReady(resource: Bitmap, transition: Transition<in Bitmap>?) {
                 bitmapState.value = resource
             }
-
             override fun onLoadCleared(placeholder: Drawable?) {}
         })
 

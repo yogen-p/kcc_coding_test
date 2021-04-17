@@ -11,6 +11,9 @@ import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.launch
 import javax.inject.Inject
 
+/*
+* ViewModel for list of case studies
+* */
 @HiltViewModel
 class CaseStudyListViewModel
 @Inject

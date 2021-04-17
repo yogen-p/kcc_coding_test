@@ -14,6 +14,9 @@ import javax.inject.Singleton
 @InstallIn(SingletonComponent::class)
 object RepositoryModule {
 
+    /*
+    * Provide Remote DataSource Repository
+    * */
     @Singleton
     @Provides
     fun provideCaseStudyRepository(

@@ -2,6 +2,7 @@ package com.yogenp.codingtest.domain.model
 
 import com.yogenp.codingtest.network.responses.SectionsResponse
 
+// Local model for network data
 data class CaseStudy(
 
     var id: Int? = null,

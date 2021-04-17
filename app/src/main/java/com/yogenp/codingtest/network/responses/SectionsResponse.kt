@@ -2,6 +2,7 @@ package com.yogenp.codingtest.network.responses
 
 import com.google.gson.annotations.SerializedName
 
+// Sub Response
 data class SectionsResponse(
 
     @SerializedName("title")

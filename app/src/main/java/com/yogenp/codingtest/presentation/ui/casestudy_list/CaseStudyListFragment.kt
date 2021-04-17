@@ -27,6 +27,9 @@ import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.coroutines.launch
 import javax.inject.Inject
 
+/*
+* Fragment to show list of case studies
+* */
 @AndroidEntryPoint
 class CaseStudyListFragment : Fragment() {
 
@@ -43,6 +46,7 @@ class CaseStudyListFragment : Fragment() {
         return ComposeView(requireContext()).apply {
             setContent {
 
+                // To use Custom Theme
                 AppTheme(darkTheme = application.isDark.value) {
                     val caseStudies = viewModel.caseStudies.value
                     Surface(

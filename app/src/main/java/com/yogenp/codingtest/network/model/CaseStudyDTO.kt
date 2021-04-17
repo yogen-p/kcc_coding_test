@@ -3,6 +3,7 @@ package com.yogenp.codingtest.network.model
 import com.google.gson.annotations.SerializedName
 import com.yogenp.codingtest.network.responses.SectionsResponse
 
+//  Network Model
 data class CaseStudyDTO(
     @SerializedName("id")
     var id: Int? = null,

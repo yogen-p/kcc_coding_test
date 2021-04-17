@@ -19,6 +19,10 @@ import com.yogenp.codingtest.domain.model.CaseStudy
 import com.yogenp.codingtest.util.DEFAULT_PLACEHOLDER_IMAGE
 import com.yogenp.codingtest.util.loadImage
 
+/*
+* Composable for HomeScreen list of case studies
+* Hero Image + Teaser
+* */
 @Composable
 fun CaseStudyCard(
     caseStudy: CaseStudy,

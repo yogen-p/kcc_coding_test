@@ -3,6 +3,7 @@ package com.yogenp.codingtest.network.model
 import com.yogenp.codingtest.domain.model.CaseStudy
 import com.yogenp.codingtest.domain.utils.DomainMapper
 
+//  Mapper Definition
 class CaseStudyDTOMapper : DomainMapper<CaseStudyDTO, CaseStudy> {
     override fun mapToDomainModel(model: CaseStudyDTO): CaseStudy {
         return CaseStudy(

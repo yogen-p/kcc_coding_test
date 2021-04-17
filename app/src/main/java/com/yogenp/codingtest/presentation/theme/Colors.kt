@@ -2,6 +2,7 @@ package com.yogenp.codingtest.presentation.theme
 
 import androidx.compose.ui.graphics.Color
 
+// Color Definitions
 val Blue300 = Color(0xFF64B5F6)
 val Blue400 = Color(0xFF42A5F5)
 val Blue500 = Color(0xFF2196F3)

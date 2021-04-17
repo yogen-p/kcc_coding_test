@@ -19,6 +19,9 @@ import com.yogenp.codingtest.network.responses.SectionsResponse
 import com.yogenp.codingtest.util.DEFAULT_PLACEHOLDER_IMAGE
 import com.yogenp.codingtest.util.loadImage
 
+/*
+* Composable for a single section
+* */
 @Composable
 fun SectionCard(
     section: SectionsResponse

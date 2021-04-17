@@ -13,6 +13,9 @@ import javax.inject.Singleton
 @InstallIn(SingletonComponent::class)
 object ThemeModule {
 
+    /*
+    * Provide Theme Control
+    * */
     @Singleton
     @Provides
     fun provideThemePreferences(@ApplicationContext app: Context): ThemePreferences{

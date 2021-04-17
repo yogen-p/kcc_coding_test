@@ -9,6 +9,9 @@ import com.yogenp.codingtest.util.TEST_CASE_STUDY
 import org.junit.Rule
 import org.junit.Test
 
+/*
+* For SectionView composable for list of sections
+* */
 class SectionViewKtTest {
 
     @get:Rule
@@ -19,6 +22,7 @@ class SectionViewKtTest {
         composeTestRule.setContent {
             SectionView(caseStudy = TEST_CASE_STUDY)
         }
+        // Fragment 2
         composeTestRule.onNodeWithContentDescription("Hero Image", ignoreCase = true)
             .assertIsDisplayed()
         composeTestRule.onNodeWithText(text = "Hello1", substring = true, ignoreCase = true)

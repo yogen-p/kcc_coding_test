@@ -6,6 +6,8 @@ import androidx.compose.material.lightColors
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.graphics.Color
 
+// Defining Custom Theme Attributes
+
 private val LightThemeColors = lightColors(
     primary = Blue600,
     primaryVariant = Blue400,
