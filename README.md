@@ -32,7 +32,7 @@ Coding Test App for Kin+Carta Create
   Utilities | Files for general purpose to provide additional functionalities
   
 
-### UI Tests
+### [UI Tests](https://github.com/yogen-p/kcc_coding_test/tree/master/app/src/androidTest/java/com/yogenp/codingtest)
 
 - BasicTests.kt | Run the basic tests to test the working of app
 - NavigationTest.kt | To check the navigation between fragments
