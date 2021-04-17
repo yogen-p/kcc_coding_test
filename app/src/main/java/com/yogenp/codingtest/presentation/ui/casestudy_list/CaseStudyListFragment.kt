@@ -4,20 +4,20 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.Toast
-import androidx.compose.foundation.layout.*
+import androidx.compose.foundation.layout.Box
+import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.fillMaxSize
+import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.itemsIndexed
-import androidx.compose.material.*
-import androidx.compose.material.icons.Icons
-import androidx.compose.material.icons.filled.NightlightRound
-import androidx.compose.ui.Alignment
+import androidx.compose.material.Surface
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.platform.ComposeView
 import androidx.compose.ui.unit.dp
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import androidx.lifecycle.lifecycleScope
+import androidx.navigation.fragment.findNavController
 import com.yogenp.codingtest.R
 import com.yogenp.codingtest.presentation.BaseApplication
 import com.yogenp.codingtest.presentation.components.CaseStudyCard
@@ -63,6 +63,9 @@ class CaseStudyListFragment : Fragment() {
                                         items = caseStudies
                                     ) { _, caseStudy ->
                                         CaseStudyCard(caseStudy = caseStudy) {
+                                            application.caseStudy = caseStudy
+                                            findNavController()
+                                                .navigate(R.id.goToCaseStudyFragment)
                                         }
                                     }
                                 }
@@ -84,10 +87,9 @@ class CaseStudyListFragment : Fragment() {
         saveTheme()
     }
 
-    private fun saveTheme(){
+    private fun saveTheme() {
         lifecycleScope.launch {
             viewModel.saveTheme(application.isDark.value)
-            Toast.makeText(application.applicationContext, "Theme Saved", Toast.LENGTH_SHORT).show()
         }
     }
 }

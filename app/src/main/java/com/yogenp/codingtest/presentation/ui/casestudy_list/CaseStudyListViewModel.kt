@@ -8,7 +8,6 @@ import com.yogenp.codingtest.domain.model.CaseStudy
 import com.yogenp.codingtest.persistence.ThemePreferences
 import com.yogenp.codingtest.repository.CaseStudyRepository
 import dagger.hilt.android.lifecycle.HiltViewModel
-import kotlinx.coroutines.flow.first
 import kotlinx.coroutines.launch
 import javax.inject.Inject
 
@@ -21,7 +20,7 @@ constructor(
 ) : ViewModel() {
 
     val caseStudies: MutableState<List<CaseStudy>> = mutableStateOf(listOf())
-    val loading = mutableStateOf(false)
+    private val loading = mutableStateOf(false)
 
     init {
         getFile()
@@ -40,10 +39,6 @@ constructor(
 
     suspend fun saveTheme(isDarkTheme: Boolean) {
         themePreferences.saveTheme(isDarkTheme)
-    }
-
-    suspend fun isDarkTheme(): Boolean{
-         return themePreferences.isDarkTheme.first()
     }
 
 }

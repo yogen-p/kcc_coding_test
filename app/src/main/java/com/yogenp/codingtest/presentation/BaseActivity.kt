@@ -2,6 +2,7 @@ package com.yogenp.codingtest.presentation
 
 import android.app.Application
 import androidx.compose.runtime.mutableStateOf
+import com.yogenp.codingtest.domain.model.CaseStudy
 import com.yogenp.codingtest.persistence.ThemePreferences
 import dagger.hilt.android.HiltAndroidApp
 import kotlinx.coroutines.MainScope
@@ -12,6 +13,7 @@ import kotlinx.coroutines.launch
 class BaseApplication : Application() {
 
     val isDark = mutableStateOf(false)
+    var caseStudy: CaseStudy? = null
 
     override fun onCreate() {
         super.onCreate()

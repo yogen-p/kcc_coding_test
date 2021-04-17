@@ -23,15 +23,15 @@ fun TopToolbar(
             Row(
                 modifier = Modifier
                     .fillMaxWidth()
-                    .height(50.dp)
+                    .height(60.dp),
+                verticalAlignment = Alignment.CenterVertically
             ) {
                 Text(
                     text = text,
                     modifier = Modifier
-                        .padding(8.dp)
+                        .padding(start = 10.dp)
                         .fillMaxWidth(0.85f)
-                        .wrapContentWidth(Alignment.Start)
-                        .align(Alignment.CenterVertically),
+                        .wrapContentWidth(Alignment.Start),
                     style = MaterialTheme.typography.h6
                 )
                 IconButton(onClick = { onClick() }) {
@@ -39,9 +39,8 @@ fun TopToolbar(
                         imageVector = Icons.Filled.NightlightRound,
                         contentDescription = "Toggle theme",
                         modifier = Modifier
-                            .padding(8.dp)
+                            .fillMaxSize()
                             .wrapContentWidth(Alignment.End)
-                            .align(Alignment.CenterVertically)
                     )
                 }
             }
