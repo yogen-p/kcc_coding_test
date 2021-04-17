@@ -5,6 +5,13 @@ Coding Test App for Kin+Carta Create
 
 [Kin+Carta Create Engineering Challenge](https://github.com/theappbusiness/engineering-challenge)
 
+
+### Snapshots
+
+Fragment 1                 |  Fragment 2
+:-------------------------:|:-------------------------:
+![Fragment 1](https://github.com/yogen-p/kcc_coding_test/blob/master/Fragment1.png)  |  ![Fragment 2](https://github.com/yogen-p/kcc_coding_test/blob/master/Fragment2.png)
+
 ### Packages
 
 - `di`
